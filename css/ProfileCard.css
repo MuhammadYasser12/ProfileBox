@@ -1,0 +1,107 @@
+:root {
+  --Darkcyan: hsl(185, 75%, 39%);
+  --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+  --Darkgrayishblue: hsl(227, 10%, 46%);
+  --Darkgray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+}
+
+p {
+  color: var(--Darkgray);
+  font-size: 12px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Darkcyan);
+  position: relative;
+  overflow: hidden;
+}
+
+* {
+  font-size: 18px;
+}
+
+main::before {
+  content: url(../images/bg-pattern-top.svg);
+  color: var(--Darkgrayishblue);
+  position: absolute;
+  top: -480px;
+  left: -430px;
+  transform: rotate(360deg);
+}
+
+main::after {
+  content: url(../images/bg-pattern-bottom.svg);
+  position: absolute;
+  bottom: -680px;
+  right: -300px;
+  transform: rotate(445deg);
+}
+.container {
+  background-color: white;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  width: fit-content;
+  height: 60%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+
+.photo {
+  position: relative;
+}
+
+.photo::before {
+  content: url("../images/image-victor.jpg");
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: fit-content;
+  bottom: -50px;
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text1 {
+  padding: 50px 50px 0px;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+}
+
+h1::after {
+  content: "26";
+  position: absolute;
+  padding-left: 10px;
+  color: var(--Darkgray);
+}
+
+.text2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text2 p {
+  margin-top: -10px;
+}
